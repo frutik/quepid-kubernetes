@@ -26,5 +26,6 @@ rake db:migrate
 
 ## TODO
 
+- finish db setup instrictions
 - make helm chart
 - add ingress / ssl offloading
