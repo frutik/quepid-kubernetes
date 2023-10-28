@@ -6,4 +6,10 @@ Basic Kubernetes setup for https://quepid.com/
 
 ### Empty
 
+```
+rake db:setup
+rake db:migrate
+
+```
+
 ### Existing
