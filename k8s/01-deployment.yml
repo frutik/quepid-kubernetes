@@ -28,16 +28,16 @@ spec:
               cpu: "650m"
               memory: "500Mi"
           imagePullPolicy: Always
-#          livenessProbe:
-#            httpGet:
-#              path: /status
-#              port: 9000
-#            initialDelaySeconds: 10
-#          readinessProbe:
-#            httpGet:
-#              path: /status
-#              port: 9000
-#            initialDelaySeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 3000
+            initialDelaySeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 3000
+            initialDelaySeconds: 10
           envFrom:
             - configMapRef:
                 name: common
