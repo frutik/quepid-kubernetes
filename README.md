@@ -7,25 +7,38 @@ Basic Kubernetes setup for https://quepid.com/
 go inside pod
 
 ```
-kubectl get pod
+➜  quepid-kubernetes git:(main) kubectl get pods -n quepid
+NAME                      READY   STATUS    RESTARTS   AGE
+quepid-5569f5fbcc-gbc9w   1/1     Running   0          6d19h
+
+➜  quepid-kubernetes git:(main) ✗ kubectl exec -n quepid --stdin --tty quepid-5569f5fbcc-gbc9w -- /bin/bash
+root@quepid-5569f5fbcc-gbc9w:/srv/app#
+
 ```
 
-### Empty
+### Empty DB
+
+Inside running pod
 
 ```
 rake db:setup
 rake db:migrate
 ```
 
-### Existing
+### Existing DB
+
+Inside running pod
 
 ```
-rake db:schema:<TODO>
+rake db:schema:load
 rake db:migrate
 ```
 
 ## TODO
 
-- finish db setup instrictions
 - make helm chart
 - add ingress / ssl offloading
+
+## SSL certificate
+
+https://cert-manager.io/docs/installation/kubectl/
