@@ -18,10 +18,10 @@ Edit `k8s/00-credentials.yml` and enter proper credentials.
 ### Install k8s manifests
 
 ```
-kubectl apply -f k8s/00-configmap.yml -n quepid
-kubectl apply -f k8s/00-credentials.yml -n quepid
-kubectl apply -f k8s/01-deployment -n quepid
-kubectl apply -f k8s/02-service -n quepid
+kubectl apply -f k8s/00-configmap.yml
+kubectl apply -f k8s/00-credentials.yml
+kubectl apply -f k8s/01-deployment.yml
+kubectl apply -f k8s/02-service.yml
 ```
 
 ## Database
