@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: quepid
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: quepid
-          image: o19s/quepid:latest
+          image: o19s/quepid:7.9.2
           ports:
             - containerPort: 3000
           resources:
@@ -41,4 +41,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: common
+            - configMapRef:
+                name: credentials
       restartPolicy: Always
