@@ -56,6 +56,20 @@ rake db:schema:load
 rake db:migrate
 ```
 
+## How to open
+
+### Locally
+
+```
+kubectl port-forward service/quepid 8080:80 -n quepid
+```
+
+You can open now http://127.0.0.1:8080/ in your browser.
+
+### Expose to outside world
+
+TODO
+
 ## TODO
 
 - make helm chart
