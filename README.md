@@ -48,7 +48,7 @@ rake db:migrate
 
 ### Existing DB
 
-Inside running pod
+You should understand all the risks of loading db schema into an existing not empty database. So, inside the running pod
 
 ```
 rake db:schema:load
@@ -65,7 +65,7 @@ kubectl port-forward service/quepid 8080:80 -n quepid
 
 You can open now http://127.0.0.1:8080/ in your browser.
 
-### Expose to outside world
+### Expose to the outside world
 
 Edit `k8s/03-ingress.yml` and enter proper values.
 
@@ -86,18 +86,20 @@ helm template chart/quepid | kubectl apply -f -
 ```
 
 You can use the --set flag to override the configuration in values.yaml. For instance, 
-if you would like to set custom secret for rails app
+if you would like to set a custom secret for Rails app
 
 ```
 helm template chart/quepid --set credentials.secret_key_base=qweasd | kubectl apply -f -
 ```
 
-or from local file with values specific for 
+or from a local file with values specific for 
 your environment (structure should match)
 
 ```
 helm template chart/quepid --values my_values.yml | kubectl apply -f -
 ```
+
+See the example of `my_values.yml` committed in this repo.
 
 ## SSL certificate
 
