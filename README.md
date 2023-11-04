@@ -14,7 +14,6 @@ kubectl create namespace quepid
 
 Edit `k8s/00-credentials.yml` and enter proper credentials.
 
-
 ### Install k8s manifests
 
 ```
@@ -68,12 +67,17 @@ You can open now http://127.0.0.1:8080/ in your browser.
 
 ### Expose to outside world
 
-TODO
+Edit `k8s/03-ingress.yml` and enter proper values.
+
+Create ingress
+
+```
+kubectl apply -f k8s/03-ingress.yml
+```
 
 ## TODO
 
 - make helm chart
-- add ingress / ssl offloading
 
 ## SSL certificate
 

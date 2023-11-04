@@ -32,3 +32,4 @@ stats
 /.gradle/
 .DS_Store
 k8s/00-credentials_.yml
+k8s/03-ingress_.yml
