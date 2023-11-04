@@ -82,8 +82,11 @@ NOT READY YET
 The only recommended way to use atm
 
 ```
-helm template chart/quepid | kubectl apply -f -
+helm template frutik-quepid chart/quepid | kubectl apply -f -
 ```
+
+Replace `frutik-quepid` by some identifier for this instance of quepid.
+For example 'x-y-z-quepid-dev'.
 
 You can use the --set flag to override the configuration in values.yaml. For instance, 
 if you would like to set a custom secret for Rails app
