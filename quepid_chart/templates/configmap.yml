@@ -1,0 +1,27 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: common
+  namespace: quepid
+data:
+  PORT: "3000"
+  RACK_ENV: "production"
+  RAILS_ENV: "production"
+  FORCE_SSL: "false"
+  MAX_THREADS: "2"
+  WEB_CONCURRENCY: "2"
+  RAILS_LOG_TO_STDOUT: "true"
+  RAILS_SERVE_STATIC_FILES: "true"
+  TC_URL: ""
+  PRIVACY_URL: ""
+  COOKIES_URL: ""
+  QUEPID_GA: ""
+  QUEPID_DOMAIN: "https://example.com"
+  EMAIL_MARKETING_MODE: "false"
+  QUEPID_DEFAULT_SCORER: "AP@10"
+  SIGNUP_ENABLED: "true"
+  COMMUNAL_SCORERS_ONLY: "false"
+  EMAIL_PROVIDER: ""
+  EMAIL_SENDER: ""
+  QUERY_LIST_SORTABLE: "true"
+  QUEPID_PROPHET_ANALYTICS: "true"
