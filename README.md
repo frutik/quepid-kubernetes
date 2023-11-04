@@ -85,6 +85,13 @@ The only recommended way to use atm
 helm template chart/quepid | kubectl apply -f -
 ```
 
+You can use the --set flag to override the configuration in values.yaml. For instance, 
+if you would like to set custom secret for rails app
+
+```
+helm template chart/quepid --set credentials.secret_key_base=qweasd | kubectl apply -f -
+```
+
 ## SSL certificate
 
 https://cert-manager.io/docs/installation/kubectl/

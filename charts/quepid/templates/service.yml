@@ -4,6 +4,8 @@ kind: Service
 metadata:
   name: quepid
   namespace: quepid
+  labels:
+    {{- include "quepid_chart.labels" . | nindent 4 }}
 spec:
   ports:
     - port: {{ .Values.service.port }}

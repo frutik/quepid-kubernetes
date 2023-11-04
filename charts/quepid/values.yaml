@@ -40,6 +40,11 @@ deployment:
   type: ClusterIP
   port: 3000
 
+credentials:
+  database_url: "mysql2://root:roor@localhost:3306/quepid"
+  redis_url: "redis://localhos:6379/0"
+  secret_key_base: "<some randon string>"
+
 ingress:
   enabled: false
   className: ""
