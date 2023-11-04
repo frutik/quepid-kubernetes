@@ -92,6 +92,13 @@ if you would like to set custom secret for rails app
 helm template chart/quepid --set credentials.secret_key_base=qweasd | kubectl apply -f -
 ```
 
+or from local file with values specific for 
+your environment (structure should match)
+
+```
+helm template chart/quepid --values my_values.yml | kubectl apply -f -
+```
+
 ## SSL certificate
 
 https://cert-manager.io/docs/installation/kubectl/

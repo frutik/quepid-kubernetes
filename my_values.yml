@@ -1,0 +1,4 @@
+credentials:
+  database_url: "mysql2://root:roottttttt@localhost:3306/quepid"
+  redis_url: "redis://localhos:6379/11111110"
+  secret_key_base: "qweasd"
