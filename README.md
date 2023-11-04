@@ -99,6 +99,8 @@ your environment (structure should match)
 helm template chart/quepid --values my_values.yml | kubectl apply -f -
 ```
 
+See the example of `my_values.yml` committed in this repo.
+
 ## SSL certificate
 
 https://cert-manager.io/docs/installation/kubectl/
