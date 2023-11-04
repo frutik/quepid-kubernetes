@@ -55,7 +55,7 @@ rake db:schema:load
 rake db:migrate
 ```
 
-## How to open
+## How to use
 
 ### Locally
 
@@ -89,7 +89,7 @@ Replace `frutik-quepid` by some identifier for this instance of quepid.
 For example 'x-y-z-quepid-dev'.
 
 You can use the --set flag to override the configuration in values.yaml. For instance, 
-if you would like to set a custom secret for Rails app
+if you would like to set a custom secret for the Rails app
 
 ```
 helm template chart/quepid --set credentials.secret_key_base=qweasd | kubectl apply -f -
