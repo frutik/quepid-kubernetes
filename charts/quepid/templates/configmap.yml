@@ -2,7 +2,6 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: common
-  namespace: quepid
   labels:
     {{- include "quepid_chart.labels" . | nindent 4 }}
 data:

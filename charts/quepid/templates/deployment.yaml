@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "quepid_chart.fullname" . }}
-  namespace: quepid
   labels:
     {{- include "quepid_chart.labels" . | nindent 4 }}
 spec:
