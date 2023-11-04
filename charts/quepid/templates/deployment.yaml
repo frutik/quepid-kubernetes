@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "quepid_chart.fullname" . }}
+  namespace: quepid
   labels:
     {{- include "quepid_chart.labels" . | nindent 4 }}
 spec:
@@ -34,17 +35,20 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http
-              containerPort: {{ .Values.service.port }}
-              protocol: TCP
+            - containerPort: {{ .Values.deployment.port }}
+          envFrom:
+            - configMapRef:
+                name: common
+            - configMapRef:
+                name: credentials
           livenessProbe:
             httpGet:
               path: /healthcheck
-              port: http
+              port: {{ .Values.deployment.port }}
           readinessProbe:
             httpGet:
               path: /healthcheck
-              port: http
+              port: {{ .Values.deployment.port }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

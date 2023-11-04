@@ -75,9 +75,15 @@ Create ingress
 kubectl apply -f k8s/03-ingress.yml
 ```
 
-## TODO
+## Helm
 
-- make helm chart
+NOT READY YET
+
+The only recommended way to use atm
+
+```
+helm template chart/quepid | kubectl apply -f -
+```
 
 ## SSL certificate
 

@@ -6,8 +6,8 @@ metadata:
   namespace: quepid
 spec:
   ports:
-    - port: 80
-      targetPort: 3000
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.deployment.port }}
       protocol: TCP
       name: http
   selector:

@@ -4,7 +4,7 @@ metadata:
   name: common
   namespace: quepid
 data:
-  PORT: "3000"
+  PORT: "{{ .Values.deployment.port }}"
   RACK_ENV: "production"
   RAILS_ENV: "production"
   FORCE_SSL: "false"
