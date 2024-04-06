@@ -2,6 +2,17 @@
 
 Basic Kubernetes setup for https://quepid.com/
 
+## Kubectl
+
+[Kubectl](KUBERNETES_CLI.md)
+
+## External dependencies
+
+This setup assumes that external dependencies (Redis and MySQL) are provided as a service by AWS/GCP or set up in the Kubernetes cloud separately.
+
+[How to create Redis instance in AWS ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Create.html#Clusters.Create.CON.RedisCluster)
+[How to create Mysql in AWS RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateDBInstance.html)
+
 ## Install
 
 ### k8s Namespace
@@ -12,7 +23,7 @@ kubectl create namespace quepid
 
 ### Edit configmap
 
-Edit `k8s/00-credentials.yml` and enter proper credentials.
+Edit `k8s/00-credentials.yml` and enter proper credentials to access external dependencies.
 
 ### Install k8s manifests
 
@@ -55,7 +66,7 @@ rake db:schema:load
 rake db:migrate
 ```
 
-## How to open
+## How to use
 
 ### Locally
 
@@ -89,7 +100,7 @@ Replace `frutik-quepid` by some identifier for this instance of quepid.
 For example 'x-y-z-quepid-dev'.
 
 You can use the --set flag to override the configuration in values.yaml. For instance, 
-if you would like to set a custom secret for Rails app
+if you would like to set a custom secret for the Rails app
 
 ```
 helm template frutik-quepid chart/quepid --set credentials.secret_key_base=qweasd | kubectl apply -n quepid -f - 
