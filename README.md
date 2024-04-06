@@ -2,6 +2,10 @@
 
 Basic Kubernetes setup for https://quepid.com/
 
+## Kubectl
+
+[Kubectl](KUBERNETES_CLI.md)
+
 ## Install
 
 ### k8s Namespace
