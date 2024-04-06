@@ -13,8 +13,6 @@ brew install kubernetes-cli
 
 ## AWS
 
-### Setting up access
-
 ```
 pip3 install awscli --upgrade
 aws configure  (you have to specify credentials - api key and secret - created in AWS IAM)
