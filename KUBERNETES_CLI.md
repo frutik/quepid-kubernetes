@@ -16,7 +16,11 @@ aws configure  (you have to specify credentials - api key and secret - created i
 aws eks --region eu-west-1 update-kubeconfig --name <kubernetes cluster namer>
 ```
 
-### Test access
+## GCP
+
+[Install kubectl and configure cluster access ](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl)
+
+## Testing access
 
 ```
 kubectl get namespaces
