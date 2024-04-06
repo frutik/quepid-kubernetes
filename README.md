@@ -74,7 +74,7 @@ rake db:migrate
 kubectl port-forward service/quepid 8080:80 -n quepid
 ```
 
-You can open now http://127.0.0.1:8080/ in your browser.
+Now you can open http://127.0.0.1:8080/ in your browser.
 
 ### Expose to the outside world
 
@@ -93,7 +93,7 @@ NOT READY YET
 The only recommended way to use atm
 
 ```
-helm template frutik-quepid chart/quepid | kubectl apply -n quepid -f -
+helm template frutik-quepid charts/quepid | kubectl apply -n quepid -f -
 ```
 
 Replace `frutik-quepid` by some identifier for this instance of quepid.
@@ -103,14 +103,14 @@ You can use the --set flag to override the configuration in values.yaml. For ins
 if you would like to set a custom secret for the Rails app
 
 ```
-helm template frutik-quepid chart/quepid --set credentials.secret_key_base=qweasd | kubectl apply -n quepid -f - 
+helm template frutik-quepid charts/quepid --set credentials.secret_key_base=qweasd | kubectl apply -n quepid -f - 
 ```
 
 or from a local file with values specific for 
 your environment (structure should match)
 
 ```
-helm template frutik-quepid chart/quepid --values my_values.yml | kubectl apply -n quepid -f -
+helm template frutik-quepid charts/quepid --values my_values.yml | kubectl apply -n quepid -f -
 ```
 
 See the example of `my_values.yml` committed in this repo.
