@@ -15,7 +15,7 @@ This setup assumes that external dependencies (Redis and MySQL) are provided as 
 
 ## Install
 
-### k8s Namespace
+### Create k8s Namespace
 
 ```
 kubectl create namespace quepid
