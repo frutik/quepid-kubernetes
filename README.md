@@ -6,6 +6,10 @@ Basic Kubernetes setup for https://quepid.com/
 
 [Kubectl](KUBERNETES_CLI.md)
 
+## External services
+
+This setup assumes that external dependencies (Redis and MySQL) are provided as a service by AWS/GCP or set up in the Kubernetes cloud separately.
+
 ## Install
 
 ### k8s Namespace
