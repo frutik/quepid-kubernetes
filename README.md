@@ -6,7 +6,7 @@ Basic Kubernetes setup for https://quepid.com/
 
 [Kubectl](KUBERNETES_CLI.md)
 
-## External services
+## External dependencies
 
 This setup assumes that external dependencies (Redis and MySQL) are provided as a service by AWS/GCP or set up in the Kubernetes cloud separately.
 
@@ -20,7 +20,7 @@ kubectl create namespace quepid
 
 ### Edit configmap
 
-Edit `k8s/00-credentials.yml` and enter proper credentials.
+Edit `k8s/00-credentials.yml` and enter proper credentials to access external dependencies.
 
 ### Install k8s manifests
 
