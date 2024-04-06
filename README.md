@@ -10,6 +10,8 @@ Basic Kubernetes setup for https://quepid.com/
 
 This setup assumes that external dependencies (Redis and MySQL) are provided as a service by AWS/GCP or set up in the Kubernetes cloud separately.
 
+[How to create Redis instance in AWS](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Create.html#Clusters.Create.CON.RedisCluster)
+
 ## Install
 
 ### k8s Namespace
