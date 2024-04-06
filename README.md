@@ -90,31 +90,26 @@ kubectl apply -f k8s/03-ingress.yml
 
 NOT READY YET
 
-The only recommended way to use atm
+### Update credentials for external dependencies
 
 ```
-helm template frutik-quepid charts/quepid | kubectl apply -n quepid -f -
+nano my_values.yml
 ```
 
-Replace `frutik-quepid` by some identifier for this instance of quepid.
-For example 'x-y-z-quepid-dev'.
+### create kubernetes namespace
 
-You can use the --set flag to override the configuration in values.yaml. For instance, 
-if you would like to set a custom secret for the Rails app
+As described previously
 
-```
-helm template frutik-quepid charts/quepid --set credentials.secret_key_base=qweasd | kubectl apply -n quepid -f - 
-```
-
-or from a local file with values specific for 
-your environment (structure should match)
+### The only recommended way to use atm
 
 ```
 helm template frutik-quepid charts/quepid --values my_values.yml | kubectl apply -n quepid -f -
 ```
 
-See the example of `my_values.yml` committed in this repo.
+Replace `frutik-quepid` with some identifier for this _instance_ of quepid.
+For example 'x-y-z-quepid-dev'.
 
-## SSL certificate
+
+### SSL certificate
 
 https://cert-manager.io/docs/installation/kubectl/
