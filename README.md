@@ -4,7 +4,7 @@ Basic Kubernetes setup for https://quepid.com/
 
 ## Kubectl
 
-[Kubectl](KUBERNETES_CLI.md)
+Setting up [Kubectl](KUBERNETES_CLI.md)
 
 ## External dependencies
 
